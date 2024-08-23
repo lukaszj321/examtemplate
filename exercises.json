@@ -1,0 +1,34 @@
+{
+    "exercises": [
+        {
+            "id": 1,
+            "type": "fill-in-the-blank",
+            "question": "Określ typy danych dla poniższych kolumn tabeli Klient:",
+            "fields": [
+                {"label": "ID_Klienta", "correctAnswer": "INT"},
+                {"label": "Nazwa_Klienta", "correctAnswer": "VARCHAR"},
+                {"label": "Miejscowość", "correctAnswer": "VARCHAR"}
+            ]
+        },
+        {
+            "id": 2,
+            "type": "open",
+            "question": "Na podstawie określonych typów danych utwórz tabelę Klient.",
+            "correctAnswer": "CREATE TABLE Klient ..."
+        },
+        {
+            "id": 3,
+            "type": "multiple-choice",
+            "question": "Jakim typem danych jest `VARCHAR` w SQL?",
+            "options": ["Liczbowy", "Tekstowy", "Data"],
+            "correctAnswer": "Tekstowy"
+        },
+        {
+            "id": 4,
+            "type": "sql-query",
+            "question": "Uzupełnij poniższe zapytanie SQL, aby wybrać wszystkich klientów, którzy kupili produkt \"Sekret Mnicha\".",
+            "query": "SELECT * FROM Sprzedaz WHERE _______ = 'Sekret Mnicha';",
+            "correctAnswer": "produkt"
+        }
+    ]
+}
