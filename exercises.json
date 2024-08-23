@@ -1,34 +1,84 @@
 {
-    "exercises": [
-        {
-            "id": 1,
-            "type": "fill-in-the-blank",
-            "question": "Określ typy danych dla poniższych kolumn tabeli Klient:",
-            "fields": [
-                {"label": "ID_Klienta", "correctAnswer": "INT"},
-                {"label": "Nazwa_Klienta", "correctAnswer": "VARCHAR"},
-                {"label": "Miejscowość", "correctAnswer": "VARCHAR"}
-            ]
-        },
-        {
-            "id": 2,
-            "type": "open",
-            "question": "Na podstawie określonych typów danych utwórz tabelę Klient.",
-            "correctAnswer": "CREATE TABLE Klient ..."
-        },
-        {
-            "id": 3,
-            "type": "multiple-choice",
-            "question": "Jakim typem danych jest `VARCHAR` w SQL?",
-            "options": ["Liczbowy", "Tekstowy", "Data"],
-            "correctAnswer": "Tekstowy"
-        },
-        {
-            "id": 4,
-            "type": "sql-query",
-            "question": "Uzupełnij poniższe zapytanie SQL, aby wybrać wszystkich klientów, którzy kupili produkt \"Sekret Mnicha\".",
-            "query": "SELECT * FROM Sprzedaz WHERE _______ = 'Sekret Mnicha';",
-            "correctAnswer": "produkt"
-        }
-    ]
+  "exercises": [
+    {
+      "type": "intro",
+      "content": "Witaj w sklepie „Od Nieba do Piekła” — wyjątkowym miejscu, gdzie duchowość spotyka się z bardziej ziemskimi potrzebami. Twój sklep oferuje szeroki asortyment produktów, które pomagają Twoim klientom poczuć wsparcie Ducha Świętego, a także znaleźć ukojenie zarówno dla duszy, jak i ciała. Od eleganckich szat liturgicznych, poprzez stylowe krzyże i świece w różnych modnych wzorach i rozmiarach, aż po kostiumy i gadżety, które mogą rozgrzać każde serce... i nie tylko."
+    },
+    {
+      "type": "intro",
+      "content": "Jednym z największych hitów sprzedażowych w Twoim sklepie są koronkowe komże. Produkt ten, pierwotnie stworzony z myślą o liturgicznych ceremoniach, zyskał niespodziewaną popularność również w bardziej... frywolnych zastosowaniach. Okazało się, że koronkowe komże są chętnie kupowane nie tylko przez duchownych, ale także przez klientów poszukujących czegoś wyjątkowego na specjalne okazje, już nie tylko na zakrystii."
+    },
+    {
+      "type": "intro",
+      "content": "Twoim zadaniem jest przygotowanie zestawu zapytań SQL, które pozwolą na analizę danych w bazie sklepu „Od Nieba do Piekła”. Wykorzystaj trzy tabele: Klient, Material oraz Sprzedaz."
+    },
+    {
+      "type": "fill-in-the-blank",
+      "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Klient:",
+      "fields": [
+        {"label": "ID_Klienta: "},
+        {"label": "Nazwa_Klienta: "},
+        {"label": "Miejscowość: "}
+      ],
+      "correctAnswers": [
+        "INT",
+        "VARCHAR",
+        "VARCHAR"
+      ]
+    },
+    {
+      "type": "fill-in-the-blank",
+      "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Material:",
+      "fields": [
+        {"label": "ID_Material: "},
+        {"label": "Nazwa_Materialu: "},
+        {"label": "Cena_Netto: "},
+        {"label": "Stawka_VAT: "}
+      ],
+      "correctAnswers": [
+        "INT",
+        "VARCHAR",
+        "DECIMAL",
+        "DECIMAL"
+      ]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Która z poniższych klauzul SQL jest używana do filtrowania rekordów?",
+      "options": [
+        "SELECT",
+        "GROUP BY",
+        "WHERE",
+        "ORDER BY"
+      ],
+      "correctAnswer": "WHERE"
+    },
+    {
+      "type": "open",
+      "question": "Napisz zapytanie SQL, które tworzy tabelę Klient z odpowiednimi typami danych.",
+      "correctAnswer": "CREATE TABLE Klient (ID_Klienta INT PRIMARY KEY, Nazwa_Klienta VARCHAR(255), Miejscowość VARCHAR(255));"
+    },
+    {
+      "type": "sql-query",
+      "question": "Uzupełnij poniższe zapytanie SQL, aby wybrać wszystkich klientów z tabeli Klient, którzy mieszkają w 'Wesoła Wioska'.",
+      "query": "SELECT * FROM Klient WHERE _______ = 'Wesoła Wioska';",
+      "correctAnswer": "Miejscowość"
+    },
+    {
+      "type": "open",
+      "question": "Dodaj nowy rekord do tabeli Material, dodając produkt 'Modlitewnik Seminarium Duchownego' o cenie 69.99 netto i stawce VAT 0.23.",
+      "correctAnswer": "INSERT INTO Material (ID_Material, Nazwa_Materialu, Cena_Netto, Stawka_VAT) VALUES (8, 'Modlitewnik Seminarium Duchownego', 69.99, 0.23);"
+    },
+    {
+      "type": "sql-query",
+      "question": "Uzupełnij poniższe zapytanie SQL, aby zaktualizować cenę netto produktu 'Komża Koronka' na 159.99.",
+      "query": "UPDATE Material SET Cena_Netto = 159.99 WHERE _______ = 'Komża Koronka';",
+      "correctAnswer": "Nazwa_Materialu"
+    },
+    {
+      "type": "open",
+      "question": "Usuń wszystkie transakcje, które miały miejsce przed '2024-08-05'.",
+      "correctAnswer": "DELETE FROM Sprzedaz WHERE Data_Sprzedazy < '2024-08-05';"
+    }
+  ]
 }
