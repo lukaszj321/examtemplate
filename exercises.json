@@ -1,18 +1,6 @@
 {
   "exercises": [
     {
-      "type": "intro",
-      "content": "Witaj w sklepie „Od Nieba do Piekła” — wyjątkowym miejscu, gdzie duchowość spotyka się z bardziej ziemskimi potrzebami. Twój sklep oferuje szeroki asortyment produktów, które pomagają Twoim klientom poczuć wsparcie Ducha Świętego, a także znaleźć ukojenie zarówno dla duszy, jak i ciała. Od eleganckich szat liturgicznych, poprzez stylowe krzyże i świece w różnych modnych wzorach i rozmiarach, aż po kostiumy i gadżety, które mogą rozgrzać każde serce... i nie tylko."
-    },
-    {
-      "type": "intro",
-      "content": "Jednym z największych hitów sprzedażowych w Twoim sklepie są koronkowe komże. Produkt ten, pierwotnie stworzony z myślą o liturgicznych ceremoniach, zyskał niespodziewaną popularność również w bardziej... frywolnych zastosowaniach. Okazało się, że koronkowe komże są chętnie kupowane nie tylko przez duchownych, ale także przez klientów poszukujących czegoś wyjątkowego na specjalne okazje, już nie tylko na zakrystii."
-    },
-    {
-      "type": "intro",
-      "content": "Twoim zadaniem jest przygotowanie zestawu zapytań SQL, które pozwolą na analizę danych w bazie sklepu „Od Nieba do Piekła”. Wykorzystaj trzy tabele: Klient, Material oraz Sprzedaz."
-    },
-    {
       "type": "fill-in-the-blank",
       "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Klient:",
       "fields": [
@@ -24,7 +12,8 @@
         "INT",
         "VARCHAR",
         "VARCHAR"
-      ]
+      ],
+      "category": "data-types"
     },
     {
       "type": "fill-in-the-blank",
@@ -40,7 +29,8 @@
         "VARCHAR",
         "DECIMAL",
         "DECIMAL"
-      ]
+      ],
+      "category": "data-types"
     },
     {
       "type": "multiple-choice",
@@ -51,34 +41,105 @@
         "WHERE",
         "ORDER BY"
       ],
-      "correctAnswer": "WHERE"
+      "correctAnswer": "WHERE",
+      "category": "query-basics"
     },
     {
       "type": "open",
       "question": "Napisz zapytanie SQL, które tworzy tabelę Klient z odpowiednimi typami danych.",
-      "correctAnswer": "CREATE TABLE Klient (ID_Klienta INT PRIMARY KEY, Nazwa_Klienta VARCHAR(255), Miejscowość VARCHAR(255));"
+      "correctAnswer": "CREATE TABLE Klient (ID_Klienta INT PRIMARY KEY, Nazwa_Klienta VARCHAR(255), Miejscowość VARCHAR(255));",
+      "category": "table-creation"
     },
     {
       "type": "sql-query",
       "question": "Uzupełnij poniższe zapytanie SQL, aby wybrać wszystkich klientów z tabeli Klient, którzy mieszkają w 'Wesoła Wioska'.",
       "query": "SELECT * FROM Klient WHERE _______ = 'Wesoła Wioska';",
-      "correctAnswer": "Miejscowość"
+      "correctAnswer": "Miejscowość",
+      "category": "query-basics"
     },
     {
       "type": "open",
       "question": "Dodaj nowy rekord do tabeli Material, dodając produkt 'Modlitewnik Seminarium Duchownego' o cenie 69.99 netto i stawce VAT 0.23.",
-      "correctAnswer": "INSERT INTO Material (ID_Material, Nazwa_Materialu, Cena_Netto, Stawka_VAT) VALUES (8, 'Modlitewnik Seminarium Duchownego', 69.99, 0.23);"
+      "correctAnswer": "INSERT INTO Material (ID_Material, Nazwa_Materialu, Cena_Netto, Stawka_VAT) VALUES (8, 'Modlitewnik Seminarium Duchownego', 69.99, 0.23);",
+      "category": "data-manipulation"
     },
     {
       "type": "sql-query",
       "question": "Uzupełnij poniższe zapytanie SQL, aby zaktualizować cenę netto produktu 'Komża Koronka' na 159.99.",
       "query": "UPDATE Material SET Cena_Netto = 159.99 WHERE _______ = 'Komża Koronka';",
-      "correctAnswer": "Nazwa_Materialu"
+      "correctAnswer": "Nazwa_Materialu",
+      "category": "data-manipulation"
     },
     {
       "type": "open",
       "question": "Usuń wszystkie transakcje, które miały miejsce przed '2024-08-05'.",
-      "correctAnswer": "DELETE FROM Sprzedaz WHERE Data_Sprzedazy < '2024-08-05';"
+      "correctAnswer": "DELETE FROM Sprzedaz WHERE Data_Sprzedazy < '2024-08-05';",
+      "category": "data-manipulation"
+    },
+    {
+      "type": "sql-query",
+      "question": "Twój sklep coraz częściej staje się przedmiotem zainteresowania. Napisz zapytanie, które wyświetli wszystkich klientów, którzy zakupili 'Sekret Mnicha'.",
+      "query": "SELECT Nazwa_Klienta FROM Klient WHERE ID_Klienta IN (SELECT ID_Klienta FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha'));",
+      "correctAnswer": "Nazwa_Klienta",
+      "category": "subquery"
+    },
+    {
+      "type": "sql-query",
+      "question": "Mówi się, że 'Sekret Mnicha' to cudowne remedium, ale czy na pewno? Policz, ile razy został sprzedany w Twoim sklepie.",
+      "query": "SELECT COUNT(*) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha');",
+      "correctAnswer": "COUNT(*)",
+      "category": "aggregate-functions"
+    },
+    {
+      "type": "sql-query",
+      "question": "Uważaj! Po ostatnich zakupach 'Relikwiarza „Ostatnie Namaszczenie”' klienci zaczynają podejrzewać, że sprzedajesz coś więcej niż tylko duchowe artefakty. Sprawdź, ilu klientów kupiło ten produkt.",
+      "query": "SELECT COUNT(DISTINCT ID_Klienta) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Relikwiarz „Ostatnie Namaszczenie”');",
+      "correctAnswer": "COUNT(DISTINCT ID_Klienta)",
+      "category": "aggregate-functions"
+    },
+    {
+      "type": "open",
+      "question": "Dodaj nowego klienta 'Parafia Świętego Grala', który właśnie złożył zamówienie na 'Komża Koronka'.",
+      "correctAnswer": "INSERT INTO Klient (ID_Klienta, Nazwa_Klienta, Miejscowość) VALUES (5, 'Parafia Świętego Grala', 'Miejscowość Błogosławieństwa');",
+      "category": "data-manipulation"
+    },
+    {
+      "type": "open",
+      "question": "Dodaj do tabeli Sprzedaz transakcję dla nowego klienta 'Parafia Świętego Grala', który zakupił 'Komża Koronka'.",
+      "correctAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (13, 5, 1, '2024-08-20');",
+      "category": "data-manipulation"
+    },
+    {
+      "type": "sql-query",
+      "question": "Jeden z Twoich stałych klientów, 'TV Trwam', chce mieć pełną kontrolę nad swoimi wydatkami. Oblicz, ile wydał na wszystkie zakupy w Twoim sklepie.",
+      "query": "SELECT SUM(Material.Cena_Netto) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material WHERE ID_Klienta = 3;",
+      "correctAnswer": "SUM(Material.Cena_Netto)",
+      "category": "join"
+    },
+    {
+      "type": "open",
+      "question": "Seminarium Duchowne potrzebuje więcej 'Modlitewników Seminarium Duchownego'. Dodaj odpowiedni rekord do tabeli Sprzedaz.",
+      "correctAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (14, 4, 8, '2024-08-22');",
+      "category": "data-manipulation"
+    },
+    {
+      "type": "sql-query",
+      "question": "Twój sklep planuje specjalną promocję na 'Gromnicę Siostry Faustyny'. Znajdź wszystkich klientów, którzy kupili ten produkt, i zaktualizuj ich w tabeli klientów, dodając notatkę 'VIP'.",
+      "query": "UPDATE Klient SET Notatka = 'VIP' WHERE ID_Klienta IN (SELECT ID_Klienta FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Gromnica Siostry Faustyny'));",
+      "correctAnswer": "Notatka = 'VIP'",
+      "category": "data-manipulation"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Które z poniższych zapytań najlepiej nadaje się do obliczenia całkowitego przychodu ze sprzedaży?",
+      "options": [
+        "SELECT COUNT(*) FROM Sprzedaz;",
+        "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Material;",
+        "SELECT SUM(Cena_Netto) FROM Material;",
+        "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material;"
+      ],
+      "correctAnswer": "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material;",
+      "category": "join"
     }
   ]
 }
