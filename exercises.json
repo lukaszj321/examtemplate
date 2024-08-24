@@ -13,6 +13,7 @@
         "VARCHAR",
         "VARCHAR"
       ],
+      "userAnswer": ["INT", "VARCHAR", "VARCHAR"], 
       "category": "data-types",
       "technicalInfo": {
         "timeSpent": 30000,
@@ -45,6 +46,7 @@
         "DECIMAL",
         "DECIMAL"
       ],
+      "userAnswer": ["INT", "VARCHAR", "DECIMAL", "DECIMAL"], 
       "category": "data-types",
       "technicalInfo": {
         "timeSpent": 45000,
@@ -72,6 +74,7 @@
         "ORDER BY"
       ],
       "correctAnswer": "WHERE",
+      "userAnswer": "WHERE",
       "category": "query-basics",
       "technicalInfo": {
         "timeSpent": 20000,
@@ -93,6 +96,7 @@
       "type": "open",
       "question": "Napisz zapytanie SQL, które tworzy tabelę Klient z odpowiednimi typami danych.",
       "correctAnswer": "CREATE TABLE Klient (ID_Klienta INT PRIMARY KEY, Nazwa_Klienta VARCHAR(255), Miejscowość VARCHAR(255));",
+      "userAnswer": "CREATE TABLE Klient (ID_Klienta INT PRIMARY KEY, Nazwa_Klienta VARCHAR(255), Miejscowość VARCHAR(255));",
       "category": "table-creation",
       "technicalInfo": {
         "timeSpent": 60000,
@@ -115,6 +119,7 @@
       "question": "Uzupełnij poniższe zapytanie SQL, aby wybrać wszystkich klientów z tabeli Klient, którzy mieszkają w 'Wesoła Wioska'.",
       "query": "SELECT * FROM Klient WHERE _______ = 'Wesoła Wioska';",
       "correctAnswer": "Miejscowość",
+      "userAnswer": "Miejscowość",
       "category": "query-basics",
       "technicalInfo": {
         "timeSpent": 40000,
@@ -136,6 +141,7 @@
       "type": "open",
       "question": "Dodaj nowy rekord do tabeli Material, dodając produkt 'Modlitewnik Seminarium Duchownego' o cenie 69.99 netto i stawce VAT 0.23.",
       "correctAnswer": "INSERT INTO Material (ID_Material, Nazwa_Materialu, Cena_Netto, Stawka_VAT) VALUES (8, 'Modlitewnik Seminarium Duchownego', 69.99, 0.23);",
+      "userAnswer": "INSERT INTO Material (ID_Material, Nazwa_Materialu, Cena_Netto, Stawka_VAT) VALUES (8, 'Modlitewnik Seminarium Duchownego', 69.99, 0.23);",
       "category": "data-manipulation",
       "technicalInfo": {
         "timeSpent": 55000,
@@ -158,6 +164,7 @@
       "question": "Uzupełnij poniższe zapytanie SQL, aby zaktualizować cenę netto produktu 'Komża Koronka' na 159.99.",
       "query": "UPDATE Material SET Cena_Netto = 159.99 WHERE _______ = 'Komża Koronka';",
       "correctAnswer": "Nazwa_Materialu",
+      "userAnswer": "Nazwa_Materialu",
       "category": "data-manipulation",
       "technicalInfo": {
         "timeSpent": 35000,
@@ -179,6 +186,7 @@
       "type": "open",
       "question": "Usuń wszystkie transakcje, które miały miejsce przed '2024-08-05'.",
       "correctAnswer": "DELETE FROM Sprzedaz WHERE Data_Sprzedazy < '2024-08-05';",
+      "userAnswer": "DELETE FROM Sprzedaz WHERE Data_Sprzedazy < '2024-08-05';",
       "category": "data-manipulation",
       "technicalInfo": {
         "timeSpent": 25000,
@@ -201,6 +209,7 @@
       "question": "Twój sklep coraz częściej staje się przedmiotem zainteresowania. Napisz zapytanie, które wyświetli wszystkich klientów, którzy zakupili 'Sekret Mnicha'.",
       "query": "SELECT Nazwa_Klienta FROM Klient WHERE ID_Klienta IN (SELECT ID_Klienta FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha'));",
       "correctAnswer": "Nazwa_Klienta",
+      "userAnswer": "Nazwa_Klienta",
       "category": "subquery",
       "technicalInfo": {
         "timeSpent": 45000,
@@ -223,6 +232,7 @@
       "question": "Mówi się, że 'Sekret Mnicha' to cudowne remedium, ale czy na pewno? Policz, ile razy został sprzedany w Twoim sklepie.",
       "query": "SELECT COUNT(*) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha');",
       "correctAnswer": "COUNT(*)",
+      "userAnswer": "COUNT(*)",
       "category": "aggregate-functions",
       "technicalInfo": {
         "timeSpent": 40000,
@@ -245,6 +255,7 @@
       "question": "Uważaj! Po ostatnich zakupach 'Relikwiarza „Ostatnie Namaszczenie”' klienci zaczynają podejrzewać, że sprzedajesz coś więcej niż tylko duchowe artefakty. Sprawdź, ilu klientów kupiło ten produkt.",
       "query": "SELECT COUNT(DISTINCT ID_Klienta) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Relikwiarz „Ostatnie Namaszczenie”');",
       "correctAnswer": "COUNT(DISTINCT ID_Klienta)",
+      "userAnswer": "COUNT(DISTINCT ID_Klienta)",
       "category": "aggregate-functions",
       "technicalInfo": {
         "timeSpent": 50000,
@@ -266,6 +277,7 @@
       "type": "open",
       "question": "Dodaj nowego klienta 'Parafia Świętego Grala', który właśnie złożył zamówienie na 'Komża Koronka'.",
       "correctAnswer": "INSERT INTO Klient (ID_Klienta, Nazwa_Klienta, Miejscowość) VALUES (5, 'Parafia Świętego Grala', 'Miejscowość Błogosławieństwa');",
+      "userAnswer": "INSERT INTO Klient (ID_Klienta, Nazwa_Klienta, Miejscowość) VALUES (5, 'Parafia Świętego Grala', 'Miejscowość Błogosławieństwa');",
       "category": "data-manipulation",
       "technicalInfo": {
         "timeSpent": 65000,
@@ -287,6 +299,7 @@
       "type": "open",
       "question": "Dodaj do tabeli Sprzedaz transakcję dla nowego klienta 'Parafia Świętego Grala', który zakupił 'Komża Koronka'.",
       "correctAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (13, 5, 1, '2024-08-20');",
+      "userAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (13, 5, 1, '2024-08-20');",
       "category": "data-manipulation",
       "technicalInfo": {
         "timeSpent": 50000,
@@ -309,6 +322,7 @@
       "question": "Jeden z Twoich stałych klientów, 'TV Trwam', chce mieć pełną kontrolę nad swoimi wydatkami. Oblicz, ile wydał na wszystkie zakupy w Twoim sklepie.",
       "query": "SELECT SUM(Material.Cena_Netto) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material WHERE ID_Klienta = 3;",
       "correctAnswer": "SUM(Material.Cena_Netto)",
+      "userAnswer": "SUM(Material.Cena_Netto)",
       "category": "join",
       "technicalInfo": {
         "timeSpent": 70000,
@@ -330,6 +344,7 @@
       "type": "open",
       "question": "Seminarium Duchowne potrzebuje więcej 'Modlitewników Seminarium Duchownego'. Dodaj odpowiedni rekord do tabeli Sprzedaz.",
       "correctAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (14, 4, 8, '2024-08-22');",
+      "userAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (14, 4, 8, '2024-08-22');",
       "category": "data-manipulation",
       "technicalInfo": {
         "timeSpent": 60000,
@@ -352,6 +367,7 @@
       "question": "Twój sklep planuje specjalną promocję na 'Gromnicę Siostry Faustyny'. Znajdź wszystkich klientów, którzy kupili ten produkt, i zaktualizuj ich w tabeli klientów, dodając notatkę 'VIP'.",
       "query": "UPDATE Klient SET Notatka = 'VIP' WHERE ID_Klienta IN (SELECT ID_Klienta FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Gromnica Siostry Faustyny'));",
       "correctAnswer": "Notatka = 'VIP'",
+      "userAnswer": "Notatka = 'VIP'",
       "category": "data-manipulation",
       "technicalInfo": {
         "timeSpent": 55000,
@@ -379,6 +395,7 @@
         "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material;"
       ],
       "correctAnswer": "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material;",
+      "userAnswer": "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material;",
       "category": "join",
       "technicalInfo": {
         "timeSpent": 40000,
