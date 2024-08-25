@@ -1,23 +1,7 @@
 {
-  "questions": [
+  "exercises": [
     {
-      "category": "DDL",
-      "type": "multiple-choice",
-      "difficulty": "beginner",
-      "question": "Które zapytanie SQL służy do tworzenia tabeli w bazie danych?",
-      "options": ["CREATE TABLE", "INSERT INTO", "SELECT", "DROP TABLE"],
-      "correctAnswer": "CREATE TABLE",
-      "explanation": "CREATE TABLE służy do tworzenia nowej tabeli w bazie danych.",
-      "reference": "https://www.sqltutorial.org/sql-create-table/",
-      "tags": ["DDL", "table-creation", "beginner"],
-      "points": 5,
-      "level": "beginner",
-      "timeSpent": "15s"
-    },
-    {
-      "category": "data-types",
       "type": "fill-in-the-blank",
-      "difficulty": "beginner",
       "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Klient:",
       "fields": [
         {"label": "ID_Klienta: "},
@@ -25,16 +9,28 @@
         {"label": "Miejscowość: "}
       ],
       "correctAnswers": ["INT", "VARCHAR", "VARCHAR"],
-      "explanation": "ID_Klienta to liczba całkowita, a Nazwa_Klienta i Miejscowość to ciągi znaków.",
-      "tags": ["data-types", "beginner"],
+      "category": "data-types",
+      "tags": ["DDL", "data-types"],
       "points": 5,
       "level": "beginner",
-      "timeSpent": "30s"
+      "technicalInfo": {
+        "timeSpent": 30000,
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 50,
+        "clicks": 10,
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
     },
     {
-      "category": "data-types",
       "type": "fill-in-the-blank",
-      "difficulty": "beginner",
       "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Material:",
       "fields": [
         {"label": "ID_Material: "},
@@ -43,192 +39,372 @@
         {"label": "Stawka_VAT: "}
       ],
       "correctAnswers": ["INT", "VARCHAR", "DECIMAL", "DECIMAL"],
-      "explanation": "ID_Material to liczba całkowita, a Cena_Netto i Stawka_VAT to wartości dziesiętne.",
-      "tags": ["data-types", "beginner"],
+      "category": "data-types",
+      "tags": ["DDL", "data-types"],
       "points": 5,
       "level": "beginner",
-      "timeSpent": "45s"
+      "technicalInfo": {
+        "timeSpent": 45000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 75,
+        "clicks": 15,
+        "scrolling": {"scrollUp": 1, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      }
     },
     {
-      "category": "SELECT",
       "type": "multiple-choice",
-      "difficulty": "beginner",
       "question": "Która z poniższych klauzul SQL jest używana do filtrowania rekordów?",
       "options": ["SELECT", "GROUP BY", "WHERE", "ORDER BY"],
       "correctAnswer": "WHERE",
-      "explanation": "Klauzula WHERE służy do filtrowania rekordów na podstawie określonego warunku.",
-      "tags": ["SELECT", "WHERE", "beginner"],
+      "category": "query-basics",
+      "tags": ["SELECT", "WHERE", "basic"],
       "points": 5,
       "level": "beginner",
-      "timeSpent": "20s"
+      "technicalInfo": {
+        "timeSpent": 20000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 30,
+        "clicks": 5,
+        "scrolling": {"scrollUp": 0, "scrollDown": 1}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 95, "offScreen": 5}
+      }
     },
     {
-      "category": "DDL",
       "type": "open",
-      "difficulty": "intermediate",
       "question": "Napisz zapytanie SQL, które tworzy tabelę Klient z odpowiednimi typami danych.",
       "correctAnswer": "CREATE TABLE Klient (ID_Klienta INT PRIMARY KEY, Nazwa_Klienta VARCHAR(255), Miejscowość VARCHAR(255));",
-      "explanation": "Tabele tworzy się za pomocą CREATE TABLE, definiując typy danych dla każdej kolumny.",
-      "tags": ["DDL", "table-creation", "intermediate"],
+      "category": "table-creation",
+      "tags": ["DDL", "table-creation"],
       "points": 10,
-      "level": "intermediate",
-      "timeSpent": "60s"
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 60000,
+        "device": "laptop",
+        "browser": "Edge",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 100,
+        "clicks": 20,
+        "scrolling": {"scrollUp": 3, "scrollDown": 5}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 92, "offScreen": 8}
+      }
     },
     {
-      "category": "SELECT",
       "type": "sql-query",
-      "difficulty": "beginner",
       "question": "Uzupełnij poniższe zapytanie SQL, aby wybrać wszystkich klientów z tabeli Klient, którzy mieszkają w 'Wesoła Wioska'.",
       "query": "SELECT * FROM Klient WHERE _______ = 'Wesoła Wioska';",
       "correctAnswer": "Miejscowość",
-      "explanation": "Klauzula WHERE używana jest do filtrowania wyników według podanego warunku.",
-      "tags": ["SELECT", "WHERE", "beginner"],
+      "category": "query-basics",
+      "tags": ["SELECT", "WHERE", "basic"],
       "points": 5,
       "level": "beginner",
-      "timeSpent": "40s"
+      "technicalInfo": {
+        "timeSpent": 40000,
+        "device": "tablet",
+        "browser": "Chrome",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 40,
+        "clicks": 8,
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 88, "offScreen": 12}
+      }
     },
     {
-      "category": "DML",
       "type": "open",
-      "difficulty": "intermediate",
       "question": "Dodaj nowy rekord do tabeli Material, dodając produkt 'Modlitewnik Seminarium Duchownego' o cenie 69.99 netto i stawce VAT 0.23.",
       "correctAnswer": "INSERT INTO Material (ID_Material, Nazwa_Materialu, Cena_Netto, Stawka_VAT) VALUES (8, 'Modlitewnik Seminarium Duchownego', 69.99, 0.23);",
-      "explanation": "Wartości do tabeli wstawia się za pomocą komendy INSERT INTO.",
-      "tags": ["DML", "insert", "intermediate"],
+      "category": "data-manipulation",
+      "tags": ["DML", "insert", "basic"],
       "points": 10,
-      "level": "intermediate",
-      "timeSpent": "55s"
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 55000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 60,
+        "clicks": 12,
+        "scrolling": {"scrollUp": 1, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 93, "offScreen": 7}
+      }
     },
     {
-      "category": "DML",
       "type": "sql-query",
-      "difficulty": "intermediate",
       "question": "Uzupełnij poniższe zapytanie SQL, aby zaktualizować cenę netto produktu 'Komża Koronka' na 159.99.",
       "query": "UPDATE Material SET Cena_Netto = 159.99 WHERE _______ = 'Komża Koronka';",
       "correctAnswer": "Nazwa_Materialu",
-      "explanation": "Komenda UPDATE pozwala na zmianę wartości w istniejącym wierszu tabeli.",
-      "tags": ["DML", "update", "intermediate"],
+      "category": "data-manipulation",
+      "tags": ["DML", "update", "basic"],
       "points": 10,
-      "level": "intermediate",
-      "timeSpent": "35s"
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 35000,
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 45,
+        "clicks": 9,
+        "scrolling": {"scrollUp": 0, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 96, "offScreen": 4}
+      }
     },
     {
-      "category": "DML",
       "type": "open",
-      "difficulty": "intermediate",
       "question": "Usuń wszystkie transakcje, które miały miejsce przed '2024-08-05'.",
       "correctAnswer": "DELETE FROM Sprzedaz WHERE Data_Sprzedazy < '2024-08-05';",
-      "explanation": "Klauzula DELETE pozwala na usunięcie rekordów z tabeli na podstawie warunku.",
-      "tags": ["DML", "delete", "intermediate"],
+      "category": "data-manipulation",
+      "tags": ["DML", "delete", "basic"],
       "points": 10,
-      "level": "intermediate",
-      "timeSpent": "25s"
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 25000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 30,
+        "clicks": 6,
+        "scrolling": {"scrollUp": 1, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 91, "offScreen": 9}
+      }
     },
     {
-      "category": "subquery",
       "type": "sql-query",
-      "difficulty": "advanced",
       "question": "Twój sklep coraz częściej staje się przedmiotem zainteresowania. Napisz zapytanie, które wyświetli wszystkich klientów, którzy zakupili 'Sekret Mnicha'.",
       "query": "SELECT Nazwa_Klienta FROM Klient WHERE ID_Klienta IN (SELECT ID_Klienta FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha'));",
       "correctAnswer": "Nazwa_Klienta",
-      "explanation": "Zapytanie zagnieżdżone pozwala na wykonanie kilku zapytań w jednym poleceniu.",
-      "tags": ["subquery", "advanced"],
+      "category": "subquery",
+      "tags": ["SELECT", "subquery", "intermediate"],
       "points": 15,
-      "level": "advanced",
-      "timeSpent": "45s"
+      "level": "intermediate",
+      "technicalInfo": {
+        "timeSpent": 45000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 65,
+        "clicks": 13,
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 89, "offScreen": 11}
+      }
     },
     {
-      "category": "aggregate-functions",
       "type": "sql-query",
-      "difficulty": "intermediate",
       "question": "Mówi się, że 'Sekret Mnicha' to cudowne remedium, ale czy na pewno? Policz, ile razy został sprzedany w Twoim sklepie.",
       "query": "SELECT COUNT(*) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha');",
       "correctAnswer": "COUNT(*)",
-      "explanation": "Funkcja COUNT pozwala na zliczenie liczby wierszy spełniających określone kryteria.",
+      "category": "aggregate-functions",
       "tags": ["SELECT", "aggregate-functions", "intermediate"],
-      "points": 10,
+      "points": 15,
       "level": "intermediate",
-      "timeSpent": "40s"
+      "technicalInfo": {
+        "timeSpent": 40000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 55,
+        "clicks": 11,
+        "scrolling": {"scrollUp": 3, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
     },
     {
-      "category": "aggregate-functions",
       "type": "sql-query",
-      "difficulty": "advanced",
       "question": "Uważaj! Po ostatnich zakupach 'Relikwiarza „Ostatnie Namaszczenie”' klienci zaczynają podejrzewać, że sprzedajesz coś więcej niż tylko duchowe artefakty. Sprawdź, ilu klientów kupiło ten produkt.",
       "query": "SELECT COUNT(DISTINCT ID_Klienta) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Relikwiarz „Ostatnie Namaszczenie”');",
       "correctAnswer": "COUNT(DISTINCT ID_Klienta)",
-      "explanation": "Funkcja COUNT(DISTINCT) zlicza unikalne wartości w określonej kolumnie.",
-      "tags": ["SELECT", "aggregate-functions", "advanced"],
+      "category": "aggregate-functions",
+      "tags": ["SELECT", "aggregate-functions", "intermediate"],
       "points": 15,
-      "level": "advanced",
-      "timeSpent": "50s"
+      "level": "intermediate",
+      "technicalInfo": {
+        "timeSpent": 50000,
+        "device": "desktop",
+        "browser": "Edge",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 80,
+        "clicks": 16,
+        "scrolling": {"scrollUp": 4, "scrollDown": 5}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 87, "offScreen": 13}
+      }
     },
     {
-      "category": "DML",
       "type": "open",
-      "difficulty": "intermediate",
       "question": "Dodaj nowego klienta 'Parafia Świętego Grala', który właśnie złożył zamówienie na 'Komża Koronka'.",
       "correctAnswer": "INSERT INTO Klient (ID_Klienta, Nazwa_Klienta, Miejscowość) VALUES (5, 'Parafia Świętego Grala', 'Miejscowość Błogosławieństwa');",
-      "explanation": "Klauzula INSERT INTO pozwala na dodanie nowego rekordu do tabeli.",
-      "tags": ["DML", "insert", "intermediate"],
+      "category": "data-manipulation",
+      "tags": ["DML", "insert", "basic"],
       "points": 10,
-      "level": "intermediate",
-      "timeSpent": "65s"
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 65000,
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 85,
+        "clicks": 17,
+        "scrolling": {"scrollUp": 3, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 94, "offScreen": 6}
+      }
     },
     {
-      "category": "DML",
       "type": "open",
-      "difficulty": "intermediate",
       "question": "Dodaj do tabeli Sprzedaz transakcję dla nowego klienta 'Parafia Świętego Grala', który zakupił 'Komża Koronka'.",
       "correctAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (13, 5, 1, '2024-08-20');",
-      "explanation": "Dodawanie transakcji do tabeli wymaga podania wartości dla wszystkich wymaganych kolumn.",
-      "tags": ["DML", "insert", "intermediate"],
+      "category": "data-manipulation",
+      "tags": ["DML", "insert", "basic"],
       "points": 10,
-      "level": "intermediate",
-      "timeSpent": "50s"
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 50000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 75,
+        "clicks": 15,
+        "scrolling": {"scrollUp": 4, "scrollDown": 5}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 88, "offScreen": 12}
+      }
     },
     {
-      "category": "JOIN",
       "type": "sql-query",
-      "difficulty": "advanced",
       "question": "Jeden z Twoich stałych klientów, 'TV Trwam', chce mieć pełną kontrolę nad swoimi wydatkami. Oblicz, ile wydał na wszystkie zakupy w Twoim sklepie.",
       "query": "SELECT SUM(Material.Cena_Netto) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material WHERE ID_Klienta = 3;",
       "correctAnswer": "SUM(Material.Cena_Netto)",
-      "explanation": "SUM zlicza wartości kolumny Cena_Netto, a JOIN łączy tabele Sprzedaz i Material.",
-      "tags": ["SELECT", "JOIN", "inner-join", "advanced"],
+      "category": "join",
+      "tags": ["SELECT", "join", "intermediate"],
       "points": 15,
-      "level": "advanced",
-      "timeSpent": "70s"
+      "level": "intermediate",
+      "technicalInfo": {
+        "timeSpent": 70000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 95,
+        "clicks": 19,
+        "scrolling": {"scrollUp": 5, "scrollDown": 6}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 92, "offScreen": 8}
+      }
     },
     {
-      "category": "DML",
       "type": "open",
-      "difficulty": "intermediate",
       "question": "Seminarium Duchowne potrzebuje więcej 'Modlitewników Seminarium Duchownego'. Dodaj odpowiedni rekord do tabeli Sprzedaz.",
       "correctAnswer": "INSERT INTO Sprzedaz (ID_Transakcji, ID_Klienta, ID_Materialu, Data_Sprzedazy) VALUES (14, 4, 8, '2024-08-22');",
-      "explanation": "Dodawanie transakcji do tabeli wymaga podania wartości dla wszystkich wymaganych kolumn.",
-      "tags": ["DML", "insert", "intermediate"],
+      "category": "data-manipulation",
+      "tags": ["DML", "insert", "basic"],
       "points": 10,
-      "level": "intermediate",
-      "timeSpent": "60s"
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 60000,
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 90,
+        "clicks": 18,
+        "scrolling": {"scrollUp": 3, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 93, "offScreen": 7}
+      }
     },
     {
-      "category": "DML",
       "type": "sql-query",
-      "difficulty": "intermediate",
       "question": "Twój sklep planuje specjalną promocję na 'Gromnicę Siostry Faustyny'. Znajdź wszystkich klientów, którzy kupili ten produkt, i zaktualizuj ich w tabeli klientów, dodając notatkę 'VIP'.",
       "query": "UPDATE Klient SET Notatka = 'VIP' WHERE ID_Klienta IN (SELECT ID_Klienta FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Gromnica Siostry Faustyny'));",
       "correctAnswer": "Notatka = 'VIP'",
-      "explanation": "UPDATE pozwala na aktualizację istniejących rekordów w tabeli.",
+      "category": "data-manipulation",
       "tags": ["DML", "update", "intermediate"],
-      "points": 10,
+      "points": 15,
       "level": "intermediate",
-      "timeSpent": "55s"
+      "technicalInfo": {
+        "timeSpent": 55000,
+        "device": "tablet",
+        "browser": "Edge",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 85,
+        "clicks": 17,
+        "scrolling": {"scrollUp": 3, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 89, "offScreen": 11}
+      }
     },
     {
-      "category": "JOIN",
       "type": "multiple-choice",
-      "difficulty": "advanced",
       "question": "Które z poniższych zapytań najlepiej nadaje się do obliczenia całkowitego przychodu ze sprzedaży?",
       "options": [
         "SELECT COUNT(*) FROM Sprzedaz;",
@@ -237,12 +413,25 @@
         "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material;"
       ],
       "correctAnswer": "SELECT SUM(Cena_Netto * (1 + Stawka_VAT)) FROM Sprzedaz JOIN Material ON Sprzedaz.ID_Materialu = Material.ID_Material;",
-      "explanation": "Zapytanie SUM wylicza całkowity przychód, łącząc tabele Sprzedaz i Material.",
-      "tags": ["SELECT", "JOIN", "inner-join", "advanced"],
+      "category": "join",
+      "tags": ["SELECT", "join", "intermediate"],
       "points": 15,
-      "level": "advanced",
-      "timeSpent": "40s"
+      "level": "intermediate",
+      "technicalInfo": {
+        "timeSpent": 40000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 70,
+        "clicks": 14,
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 91, "offScreen": 9}
+      }
     }
-  ],
-  "version": "1.0"
+  ]
 }
