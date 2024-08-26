@@ -1,7 +1,9 @@
 {
-  "exercises": [
+  "questions": [
     {
+      "category": "DDL",
       "type": "multiple-choice",
+      "difficulty": "basic",
       "question": "Które zapytanie SQL służy do tworzenia tabeli w bazie danych?",
       "options": ["CREATE TABLE", "INSERT INTO", "SELECT", "DROP TABLE"],
       "correctAnswer": "CREATE TABLE",
@@ -10,8 +12,9 @@
       "tags": ["DDL", "basic", "table-creation"],
       "points": 5,
       "level": "beginner",
+      "timeSpent": "15s",
       "technicalInfo": {
-        "timeSpent": 15000, 
+        "timeSpent": 15000,
         "device": "laptop",
         "browser": "Chrome",
         "resolution": "1920x1080"
@@ -24,20 +27,12 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 95, "offScreen": 5}
-      },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"Query": "CREATE TABLE", "Description": "Tworzy nową tabelę w bazie danych."},
-          {"Query": "INSERT INTO", "Description": "Dodaje nowe dane do istniejącej tabeli."},
-          {"Query": "SELECT", "Description": "Wybiera dane z tabeli."},
-          {"Query": "DROP TABLE", "Description": "Usuwa tabelę z bazy danych."}
-        ],
-        "columns": ["Query", "Description"]
       }
     },
     {
+      "category": "DML",
       "type": "fill-in-the-blank",
+      "difficulty": "basic",
       "question": "Aby zmienić wartość w istniejącym wierszu w tabeli, używamy zapytania `UPDATE table_name SET column_name = new_value _______ condition;`",
       "correctAnswer": "WHERE",
       "explanation": "Klauzula WHERE służy do określenia, które wiersze mają zostać zaktualizowane.",
@@ -45,6 +40,7 @@
       "tags": ["DML", "basic", "update"],
       "points": 5,
       "level": "beginner",
+      "timeSpent": "10s",
       "technicalInfo": {
         "timeSpent": 10000, 
         "device": "tablet",
@@ -59,19 +55,12 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 85, "offScreen": 15}
-      },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"Operation": "UPDATE", "Description": "Aktualizuje dane w tabeli."},
-          {"Operation": "SET", "Description": "Określa kolumny, które mają zostać zmienione."},
-          {"Operation": "WHERE", "Description": "Definiuje warunek, który muszą spełniać zmieniane rekordy."}
-        ],
-        "columns": ["Operation", "Description"]
       }
     },
     {
+      "category": "SELECT",
       "type": "multiple-choice",
+      "difficulty": "basic",
       "question": "Które zapytanie SQL zwraca wszystkie kolumny z tabeli?",
       "options": ["SELECT *", "SELECT ALL", "SELECT COLUMNS", "SELECT EVERYTHING"],
       "correctAnswer": "SELECT *",
@@ -80,6 +69,7 @@
       "tags": ["SELECT", "basic"],
       "points": 5,
       "level": "beginner",
+      "timeSpent": "10s",
       "technicalInfo": {
         "timeSpent": 10000,
         "device": "desktop",
@@ -94,20 +84,12 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 95, "offScreen": 5}
-      },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"Query": "SELECT *", "Description": "Zwraca wszystkie kolumny z tabeli."},
-          {"Query": "SELECT ALL", "Description": "Służy do wybierania wszystkich wierszy."},
-          {"Query": "SELECT COLUMNS", "Description": "Nie jest poprawną składnią SQL."},
-          {"Query": "SELECT EVERYTHING", "Description": "Nie jest poprawną składnią SQL."}
-        ],
-        "columns": ["Query", "Description"]
       }
     },
     {
+      "category": "aggregate-functions",
       "type": "sql-query",
+      "difficulty": "intermediate",
       "question": "Mówi się, że 'Sekret Mnicha' to cudowne remedium, ale czy na pewno? Policz, ile razy został sprzedany w Twoim sklepie.",
       "query": "SELECT COUNT(*) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha');",
       "correctAnswer": "COUNT(*)",
@@ -116,6 +98,7 @@
       "tags": ["aggregate-functions", "intermediate"],
       "points": 10,
       "level": "intermediate",
+      "timeSpent": "40s",
       "technicalInfo": {
         "timeSpent": 40000,
         "device": "tablet",
@@ -130,135 +113,20 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 90, "offScreen": 10}
-      },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"Month": "Styczeń", "Sales": 12},
-          {"Month": "Luty", "Sales": 19},
-          {"Month": "Marzec", "Sales": 30}
-        ],
-        "columns": ["Month", "Sales"]
       }
     },
     {
-      "type": "fill-in-the-blank",
-      "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Klient:",
-      "fields": [
-        {"label": "ID_Klienta: "},
-        {"label": "Nazwa_Klienta: "},
-        {"label": "Miejscowość: "}
-      ],
-      "correctAnswers": ["INT", "VARCHAR", "VARCHAR"],
-      "category": "data-types",
-      "tags": ["DDL", "data-types"],
-      "points": 5,
-      "level": "beginner",
-      "technicalInfo": {
-        "timeSpent": 30000,
-        "device": "laptop",
-        "browser": "Chrome",
-        "resolution": "1920x1080"
-      },
-      "behavioralInfo": {
-        "mouseMovements": 50,
-        "clicks": 10,
-        "scrolling": {"scrollUp": 2, "scrollDown": 3}
-      },
-      "biometricInfo": {
-        "faceRecognition": true,
-        "eyeTracking": {"onScreen": 90, "offScreen": 10}
-      },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"ID_Klienta": 1, "Nazwa_Klienta": "Jan Kowalski", "Miejscowość": "Warszawa"},
-          {"ID_Klienta": 2, "Nazwa_Klienta": "Anna Nowak", "Miejscowość": "Kraków"}
-        ],
-        "columns": ["ID_Klienta", "Nazwa_Klienta", "Miejscowość"]
-      }
-    },
-    {
-      "type": "fill-in-the-blank",
-      "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Material:",
-      "fields": [
-        {"label": "ID_Material: "},
-        {"label": "Nazwa_Materialu: "},
-        {"label": "Cena_Netto: "},
-        {"label": "Stawka_VAT: "}
-      ],
-      "correctAnswers": ["INT", "VARCHAR", "DECIMAL", "DECIMAL"],
-      "category": "data-types",
-      "tags": ["DDL", "data-types"],
-      "points": 5,
-      "level": "beginner",
-      "technicalInfo": {
-        "timeSpent": 45000,
-        "device": "tablet",
-        "browser": "Safari",
-        "resolution": "2048x1536"
-      },
-      "behavioralInfo": {
-        "mouseMovements": 75,
-        "clicks": 15,
-        "scrolling": {"scrollUp": 1, "scrollDown": 4}
-      },
-      "biometricInfo": {
-        "faceRecognition": true,
-        "eyeTracking": {"onScreen": 85, "offScreen": 15}
-      },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"ID_Material": 1, "Nazwa_Materialu": "Sekret Mnicha", "Cena_Netto": 100, "Stawka_VAT": 23},
-          {"ID_Material": 2, "Nazwa_Materialu": "Księga Cieni", "Cena_Netto": 150, "Stawka_VAT": 23}
-        ],
-        "columns": ["ID_Material", "Nazwa_Materialu", "Cena_Netto", "Stawka_VAT"]
-      }
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Która z poniższych klauzul SQL jest używana do filtrowania rekordów?",
-      "options": ["SELECT", "GROUP BY", "WHERE", "ORDER BY"],
-      "correctAnswer": "WHERE",
-      "category": "query-basics",
-      "tags": ["SELECT", "WHERE", "basic"],
-      "points": 5,
-      "level": "beginner",
-      "technicalInfo": {
-        "timeSpent": 20000,
-        "device": "desktop",
-        "browser": "Firefox",
-        "resolution": "1366x768"
-      },
-      "behavioralInfo": {
-        "mouseMovements": 30,
-        "clicks": 5,
-        "scrolling": {"scrollUp": 0, "scrollDown": 1}
-      },
-      "biometricInfo": {
-        "faceRecognition": true,
-        "eyeTracking": {"onScreen": 95, "offScreen": 5}
-      },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"Clause": "SELECT", "Usage": "Wybiera kolumny z tabeli."},
-          {"Clause": "WHERE", "Usage": "Filtruje rekordy na podstawie warunku."},
-          {"Clause": "GROUP BY", "Usage": "Grupuje rekordy na podstawie kolumn."},
-          {"Clause": "ORDER BY", "Usage": "Sortuje rekordy według kolumn."}
-        ],
-        "columns": ["Clause", "Usage"]
-      }
-    },
-    {
+      "category": "DDL",
       "type": "open",
+      "difficulty": "beginner",
       "question": "Napisz zapytanie SQL, które tworzy tabelę Klient z odpowiednimi typami danych.",
       "correctAnswer": "CREATE TABLE Klient (ID_Klienta INT PRIMARY KEY, Nazwa_Klienta VARCHAR(255), Miejscowość VARCHAR(255));",
-      "category": "table-creation",
+      "explanation": "CREATE TABLE tworzy tabelę z określonymi kolumnami i typami danych.",
+      "reference": "https://www.sqltutorial.org/sql-create-table/",
       "tags": ["DDL", "table-creation"],
       "points": 10,
       "level": "beginner",
+      "timeSpent": "60s",
       "technicalInfo": {
         "timeSpent": 60000,
         "device": "laptop",
@@ -273,16 +141,122 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      }
+    },
+    {
+      "category": "DML",
+      "type": "multiple-choice",
+      "difficulty": "intermediate",
+      "question": "Która klauzula SQL jest używana do sortowania wyników?",
+      "options": ["GROUP BY", "ORDER BY", "SORT", "HAVING"],
+      "correctAnswer": "ORDER BY",
+      "explanation": "Klauzula ORDER BY służy do sortowania wyników według jednej lub więcej kolumn.",
+      "reference": "https://www.sqltutorial.org/sql-order-by/",
+      "tags": ["DML", "intermediate", "sorting"],
+      "points": 5,
+      "level": "intermediate",
+      "timeSpent": "20s",
+      "technicalInfo": {
+        "timeSpent": 20000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
       },
-      "visualization": {
-        "type": "table",
-        "data": [
-          {"Column": "ID_Klienta", "DataType": "INT"},
-          {"Column": "Nazwa_Klienta", "DataType": "VARCHAR(255)"},
-          {"Column": "Miejscowość", "DataType": "VARCHAR(255)"}
-        ],
-        "columns": ["Column", "DataType"]
+      "behavioralInfo": {
+        "mouseMovements": 30,
+        "clicks": 6,
+        "scrolling": {"scrollUp": 1, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
+    },
+    {
+      "category": "JOIN",
+      "type": "sql-query",
+      "difficulty": "advanced",
+      "question": "Połącz tabele Klient i Zamówienia, aby uzyskać listę klientów, którzy złożyli zamówienia.",
+      "query": "SELECT Klient.Nazwa_Klienta, Zamówienia.ID_Zamówienia FROM Klient JOIN Zamówienia ON Klient.ID_Klienta = Zamówienia.ID_Klienta;",
+      "correctAnswer": "JOIN",
+      "explanation": "JOIN łączy dwie tabele na podstawie wspólnej kolumny.",
+      "reference": "https://www.sqltutorial.org/sql-joins/",
+      "tags": ["JOIN", "advanced", "query"],
+      "points": 15,
+      "level": "advanced",
+      "timeSpent": "50s",
+      "technicalInfo": {
+        "timeSpent": 50000,
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 60,
+        "clicks": 13,
+        "scrolling": {"scrollUp": 3, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 92, "offScreen": 8}
+      }
+    },
+    {
+      "category": "DML",
+      "type": "fill-in-the-blank",
+      "difficulty": "intermediate",
+      "question": "Uzupełnij zapytanie SQL, aby usunąć wszystkie rekordy z tabeli Klient: `DELETE FROM Klient _______;`",
+      "correctAnswer": "WHERE",
+      "explanation": "Klauzula WHERE w DELETE określa, które rekordy mają zostać usunięte.",
+      "reference": "https://www.sqltutorial.org/sql-delete/",
+      "tags": ["DML", "delete", "intermediate"],
+      "points": 5,
+      "level": "intermediate",
+      "timeSpent": "15s",
+      "technicalInfo": {
+        "timeSpent": 15000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 35,
+        "clicks": 8,
+        "scrolling": {"scrollUp": 2, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      }
+    },
+    {
+      "category": "DDL",
+      "type": "open",
+      "difficulty": "advanced",
+      "question": "Napisz zapytanie SQL, które usunie tabelę Produkty z bazy danych.",
+      "correctAnswer": "DROP TABLE Produkty;",
+      "explanation": "DROP TABLE usuwa tabelę i wszystkie jej dane.",
+      "reference": "https://www.sqltutorial.org/sql-drop-table/",
+      "tags": ["DDL", "advanced", "drop"],
+      "points": 10,
+      "level": "advanced",
+      "timeSpent": "30s",
+      "technicalInfo": {
+        "timeSpent": 30000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 45,
+        "clicks": 10,
+        "scrolling": {"scrollUp": 1, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
       }
     }
-  ]
+  ],
+  "version": "1.2"
 }
