@@ -4,59 +4,59 @@
       "type": "fill-in-the-blank",
       "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Klient:",
       "fields": [
-        { "label": "ID_Klienta: " },
-        { "label": "Nazwa_Klienta: " },
-        { "label": "Miejscowość: " }
+        {"label": "ID_Klienta: "},
+        {"label": "Nazwa_Klienta: "},
+        {"label": "Miejscowość: "}
       ],
       "correctAnswers": ["INT", "VARCHAR", "VARCHAR"],
       "category": "data-types",
       "tags": ["DDL", "data-types"],
       "points": 5,
       "level": "beginner",
-      "technicalInfo": {
+      "technicalDetails": {
         "timeSpent": 30000,
         "device": "laptop",
         "browser": "Chrome",
         "resolution": "1920x1080"
       },
-      "behavioralInfo": {
+      "behavioralDetails": {
         "mouseMovements": 50,
         "clicks": 10,
-        "scrolling": { "scrollUp": 2, "scrollDown": 3 }
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 90, "offScreen": 10 }
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
       }
     },
     {
       "type": "fill-in-the-blank",
       "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Material:",
       "fields": [
-        { "label": "ID_Material: " },
-        { "label": "Nazwa_Materialu: " },
-        { "label": "Cena_Netto: " },
-        { "label": "Stawka_VAT: " }
+        {"label": "ID_Material: "},
+        {"label": "Nazwa_Materialu: "},
+        {"label": "Cena_Netto: "},
+        {"label": "Stawka_VAT: "}
       ],
       "correctAnswers": ["INT", "VARCHAR", "DECIMAL", "DECIMAL"],
       "category": "data-types",
       "tags": ["DDL", "data-types"],
       "points": 5,
       "level": "beginner",
-      "technicalInfo": {
+      "technicalDetails": {
         "timeSpent": 45000,
         "device": "tablet",
         "browser": "Safari",
         "resolution": "2048x1536"
       },
-      "behavioralInfo": {
+      "behavioralDetails": {
         "mouseMovements": 75,
         "clicks": 15,
-        "scrolling": { "scrollUp": 1, "scrollDown": 4 }
+        "scrolling": {"scrollUp": 1, "scrollDown": 4}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 85, "offScreen": 15 }
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
       }
     },
     {
@@ -68,20 +68,20 @@
       "tags": ["SELECT", "WHERE", "basic"],
       "points": 5,
       "level": "beginner",
-      "technicalInfo": {
+      "technicalDetails": {
         "timeSpent": 20000,
         "device": "desktop",
         "browser": "Firefox",
         "resolution": "1366x768"
       },
-      "behavioralInfo": {
+      "behavioralDetails": {
         "mouseMovements": 30,
         "clicks": 5,
-        "scrolling": { "scrollUp": 0, "scrollDown": 1 }
+        "scrolling": {"scrollUp": 0, "scrollDown": 1}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 95, "offScreen": 5 }
+        "eyeTracking": {"onScreen": 95, "offScreen": 5}
       }
     },
     {
@@ -92,20 +92,20 @@
       "tags": ["DDL", "table-creation"],
       "points": 10,
       "level": "beginner",
-      "technicalInfo": {
+      "technicalDetails": {
         "timeSpent": 60000,
         "device": "laptop",
         "browser": "Edge",
         "resolution": "1920x1080"
       },
-      "behavioralInfo": {
+      "behavioralDetails": {
         "mouseMovements": 100,
         "clicks": 20,
-        "scrolling": { "scrollUp": 3, "scrollDown": 5 }
+        "scrolling": {"scrollUp": 3, "scrollDown": 5}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 92, "offScreen": 8 }
+        "eyeTracking": {"onScreen": 92, "offScreen": 8}
       }
     },
     {
@@ -117,20 +117,20 @@
       "tags": ["SELECT", "WHERE", "basic"],
       "points": 5,
       "level": "beginner",
-      "technicalInfo": {
+      "technicalDetails": {
         "timeSpent": 40000,
         "device": "tablet",
         "browser": "Chrome",
         "resolution": "2048x1536"
       },
-      "behavioralInfo": {
+      "behavioralDetails": {
         "mouseMovements": 40,
         "clicks": 8,
-        "scrolling": { "scrollUp": 2, "scrollDown": 3 }
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 88, "offScreen": 12 }
+        "eyeTracking": {"onScreen": 88, "offScreen": 12}
       }
     },
     {
@@ -141,20 +141,20 @@
       "tags": ["DML", "insert", "basic"],
       "points": 10,
       "level": "beginner",
-      "technicalInfo": {
+      "technicalDetails": {
         "timeSpent": 55000,
         "device": "desktop",
         "browser": "Firefox",
         "resolution": "1366x768"
       },
-      "behavioralInfo": {
+      "behavioralDetails": {
         "mouseMovements": 60,
         "clicks": 12,
-        "scrolling": { "scrollUp": 1, "scrollDown": 4 }
+        "scrolling": {"scrollUp": 1, "scrollDown": 4}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 93, "offScreen": 7 }
+        "eyeTracking": {"onScreen": 93, "offScreen": 7}
       }
     },
     {
@@ -166,20 +166,20 @@
       "tags": ["DML", "update", "basic"],
       "points": 10,
       "level": "beginner",
-      "technicalInfo": {
+      "technicalDetails": {
         "timeSpent": 35000,
         "device": "laptop",
         "browser": "Chrome",
         "resolution": "1920x1080"
       },
-      "behavioralInfo": {
+      "behavioralDetails": {
         "mouseMovements": 45,
         "clicks": 9,
-        "scrolling": { "scrollUp": 0, "scrollDown": 2 }
+        "scrolling": {"scrollUp": 0, "scrollDown": 2}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 90, "offScreen": 10 }
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
       }
     },
     {
@@ -190,69 +190,20 @@
       "tags": ["DML", "delete"],
       "points": 10,
       "level": "beginner",
-      "technicalInfo": {
-        "timeSpent": 30000,
-        "device": "laptop",
-        "browser": "Edge",
-        "resolution": "1920x1080"
-      },
-      "behavioralInfo": {
-        "mouseMovements": 35,
-        "clicks": 7,
-        "scrolling": { "scrollUp": 1, "scrollDown": 1 }
-      },
-      "biometricInfo": {
-        "faceRecognition": true,
-        "eyeTracking": { "onScreen": 87, "offScreen": 13 }
-      }
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Jakie słowo kluczowe jest używane do dodania nowej kolumny do istniejącej tabeli?",
-      "options": ["ALTER", "ADD", "CREATE", "INSERT"],
-      "correctAnswer": "ADD",
-      "category": "table-alterations",
-      "tags": ["ALTER", "ADD", "table-modification"],
-      "points": 5,
-      "level": "beginner",
-      "technicalInfo": {
-        "timeSpent": 15000,
+      "technicalDetails": {
+        "timeSpent": 40000,
         "device": "tablet",
         "browser": "Safari",
         "resolution": "2048x1536"
       },
-      "behavioralInfo": {
-        "mouseMovements": 20,
-        "clicks": 4,
-        "scrolling": { "scrollUp": 1, "scrollDown": 1 }
+      "behavioralDetails": {
+        "mouseMovements": 55,
+        "clicks": 11,
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
       },
-      "biometricInfo": {
+      "biometricDetails": {
         "faceRecognition": true,
-        "eyeTracking": { "onScreen": 89, "offScreen": 11 }
-      }
-    },
-    {
-      "type": "open",
-      "question": "Napisz zapytanie SQL, aby usunąć tabelę Klient.",
-      "correctAnswer": "DROP TABLE Klient;",
-      "category": "table-alterations",
-      "tags": ["DDL", "drop-table"],
-      "points": 10,
-      "level": "beginner",
-      "technicalInfo": {
-        "timeSpent": 25000,
-        "device": "desktop",
-        "browser": "Firefox",
-        "resolution": "1366x768"
-      },
-      "behavioralInfo": {
-        "mouseMovements": 25,
-        "clicks": 5,
-        "scrolling": { "scrollUp": 1, "scrollDown": 2 }
-      },
-      "biometricInfo": {
-        "faceRecognition": true,
-        "eyeTracking": { "onScreen": 91, "offScreen": 9 }
+        "eyeTracking": {"onScreen": 87, "offScreen": 13}
       }
     }
   ]
