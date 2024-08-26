@@ -24,6 +24,16 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 95, "offScreen": 5}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"Query": "CREATE TABLE", "Description": "Tworzy nową tabelę w bazie danych."},
+          {"Query": "INSERT INTO", "Description": "Dodaje nowe dane do istniejącej tabeli."},
+          {"Query": "SELECT", "Description": "Wybiera dane z tabeli."},
+          {"Query": "DROP TABLE", "Description": "Usuwa tabelę z bazy danych."}
+        ],
+        "columns": ["Query", "Description"]
       }
     },
     {
@@ -49,6 +59,15 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"Operation": "UPDATE", "Description": "Aktualizuje dane w tabeli."},
+          {"Operation": "SET", "Description": "Określa kolumny, które mają zostać zmienione."},
+          {"Operation": "WHERE", "Description": "Definiuje warunek, który muszą spełniać zmieniane rekordy."}
+        ],
+        "columns": ["Operation", "Description"]
       }
     },
     {
@@ -75,6 +94,16 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 95, "offScreen": 5}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"Query": "SELECT *", "Description": "Zwraca wszystkie kolumny z tabeli."},
+          {"Query": "SELECT ALL", "Description": "Służy do wybierania wszystkich wierszy."},
+          {"Query": "SELECT COLUMNS", "Description": "Nie jest poprawną składnią SQL."},
+          {"Query": "SELECT EVERYTHING", "Description": "Nie jest poprawną składnią SQL."}
+        ],
+        "columns": ["Query", "Description"]
       }
     },
     {
@@ -101,6 +130,15 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"Month": "Styczeń", "Sales": 12},
+          {"Month": "Luty", "Sales": 19},
+          {"Month": "Marzec", "Sales": 30}
+        ],
+        "columns": ["Month", "Sales"]
       }
     },
     {
@@ -130,6 +168,14 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"ID_Klienta": 1, "Nazwa_Klienta": "Jan Kowalski", "Miejscowość": "Warszawa"},
+          {"ID_Klienta": 2, "Nazwa_Klienta": "Anna Nowak", "Miejscowość": "Kraków"}
+        ],
+        "columns": ["ID_Klienta", "Nazwa_Klienta", "Miejscowość"]
       }
     },
     {
@@ -160,6 +206,14 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"ID_Material": 1, "Nazwa_Materialu": "Sekret Mnicha", "Cena_Netto": 100, "Stawka_VAT": 23},
+          {"ID_Material": 2, "Nazwa_Materialu": "Księga Cieni", "Cena_Netto": 150, "Stawka_VAT": 23}
+        ],
+        "columns": ["ID_Material", "Nazwa_Materialu", "Cena_Netto", "Stawka_VAT"]
       }
     },
     {
@@ -185,6 +239,16 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 95, "offScreen": 5}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"Clause": "SELECT", "Usage": "Wybiera kolumny z tabeli."},
+          {"Clause": "WHERE", "Usage": "Filtruje rekordy na podstawie warunku."},
+          {"Clause": "GROUP BY", "Usage": "Grupuje rekordy na podstawie kolumn."},
+          {"Clause": "ORDER BY", "Usage": "Sortuje rekordy według kolumn."}
+        ],
+        "columns": ["Clause", "Usage"]
       }
     },
     {
@@ -209,6 +273,15 @@
       "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      },
+      "visualization": {
+        "type": "table",
+        "data": [
+          {"Column": "ID_Klienta", "DataType": "INT"},
+          {"Column": "Nazwa_Klienta", "DataType": "VARCHAR(255)"},
+          {"Column": "Miejscowość", "DataType": "VARCHAR(255)"}
+        ],
+        "columns": ["Column", "DataType"]
       }
     }
   ]
