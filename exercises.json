@@ -181,6 +181,280 @@
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 90, "offScreen": 10}
       }
+    },
+    {
+      "type": "open",
+      "question": "Usuń rekord z tabeli Material, który ma ID_Material = 8.",
+      "correctAnswer": "DELETE FROM Material WHERE ID_Material = 8;",
+      "category": "data-manipulation",
+      "tags": ["DML", "delete"],
+      "points": 10,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 30000,
+        "device": "laptop",
+        "browser": "Edge",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 40,
+        "clicks": 8,
+        "scrolling": {"scrollUp": 1, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Napisz zapytanie SQL, aby pobrać nazwy wszystkich materiałów, które mają cenę netto większą niż 100.",
+      "query": "SELECT Nazwa_Materialu FROM Material WHERE Cena_Netto > 100;",
+      "correctAnswer": "SELECT Nazwa_Materialu FROM Material WHERE Cena_Netto > 100;",
+      "category": "query-basics",
+      "tags": ["SELECT", "WHERE"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 25000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 35,
+        "clicks": 7,
+        "scrolling": {"scrollUp": 1, "scrollDown": 1}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Uzupełnij poniższe zapytanie SQL, aby policzyć liczbę materiałów w tabeli Material.",
+      "query": "SELECT COUNT(*) FROM Material;",
+      "correctAnswer": "SELECT COUNT(*) FROM Material;",
+      "category": "query-basics",
+      "tags": ["SELECT", "COUNT"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 20000,
+        "device": "tablet",
+        "browser": "Chrome",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 30,
+        "clicks": 6,
+        "scrolling": {"scrollUp": 1, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 95, "offScreen": 5}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Napisz zapytanie SQL, które zwraca klientów z tabeli Klient posortowanych według nazwy w porządku rosnącym.",
+      "query": "SELECT * FROM Klient ORDER BY Nazwa_Klienta ASC;",
+      "correctAnswer": "SELECT * FROM Klient ORDER BY Nazwa_Klienta ASC;",
+      "category": "query-basics",
+      "tags": ["SELECT", "ORDER BY"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 30000,
+        "device": "laptop",
+        "browser": "Edge",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 40,
+        "clicks": 8,
+        "scrolling": {"scrollUp": 2, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Napisz zapytanie SQL, które zwraca średnią cenę netto z tabeli Material.",
+      "query": "SELECT AVG(Cena_Netto) AS Srednia_Cena FROM Material;",
+      "correctAnswer": "SELECT AVG(Cena_Netto) AS Srednia_Cena FROM Material;",
+      "category": "query-basics",
+      "tags": ["SELECT", "AVG"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 30000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 35,
+        "clicks": 7,
+        "scrolling": {"scrollUp": 1, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Uzupełnij poniższe zapytanie SQL, aby znaleźć wszystkie unikalne miejscowości w tabeli Klient.",
+      "query": "SELECT DISTINCT Miejscowość FROM Klient;",
+      "correctAnswer": "SELECT DISTINCT Miejscowość FROM Klient;",
+      "category": "query-basics",
+      "tags": ["SELECT", "DISTINCT"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 25000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 30,
+        "clicks": 6,
+        "scrolling": {"scrollUp": 1, "scrollDown": 1}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
+    },
+    {
+      "type": "fill-in-the-blank",
+      "question": "Uzupełnij poniższe zapytanie SQL, aby znaleźć najdroższy materiał w tabeli Material:",
+      "query": "SELECT * FROM Material WHERE Cena_Netto = (SELECT MAX(Cena_Netto) FROM Material);",
+      "correctAnswer": "SELECT * FROM Material WHERE Cena_Netto = (SELECT MAX(Cena_Netto) FROM Material);",
+      "category": "query-basics",
+      "tags": ["SELECT", "MAX"],
+      "points": 10,
+      "level": "intermediate",
+      "technicalInfo": {
+        "timeSpent": 40000,
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 45,
+        "clicks": 10,
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 88, "offScreen": 12}
+      }
+    },
+    {
+      "type": "fill-in-the-blank",
+      "question": "Na podstawie poniższych informacji, uzupełnij zapytanie SQL, aby znaleźć wszystkich klientów z tabeli Klient, których ID_Klienta jest mniejsze niż 10:",
+      "query": "SELECT * FROM Klient WHERE ID_Klienta < _______;",
+      "correctAnswer": "10",
+      "category": "query-basics",
+      "tags": ["SELECT", "WHERE"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 25000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 30,
+        "clicks": 6,
+        "scrolling": {"scrollUp": 1, "scrollDown": 1}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Napisz zapytanie SQL, które zwraca wszystkie kolumny z tabeli Klient, posortowane według ID_Klienta malejąco.",
+      "query": "SELECT * FROM Klient ORDER BY ID_Klienta DESC;",
+      "correctAnswer": "SELECT * FROM Klient ORDER BY ID_Klienta DESC;",
+      "category": "query-basics",
+      "tags": ["SELECT", "ORDER BY"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 30000,
+        "device": "desktop",
+        "browser": "Edge",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 35,
+        "clicks": 7,
+        "scrolling": {"scrollUp": 1, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Napisz zapytanie SQL, które oblicza łączną wartość VAT (Cena_Netto * Stawka_VAT) dla wszystkich materiałów w tabeli Material.",
+      "query": "SELECT SUM(Cena_Netto * Stawka_VAT) AS Laczna_Wartosc_VAT FROM Material;",
+      "correctAnswer": "SELECT SUM(Cena_Netto * Stawka_VAT) AS Laczna_Wartosc_VAT FROM Material;",
+      "category": "query-basics",
+      "tags": ["SELECT", "SUM"],
+      "points": 10,
+      "level": "intermediate",
+      "technicalInfo": {
+        "timeSpent": 35000,
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 40,
+        "clicks": 8,
+        "scrolling": {"scrollUp": 2, "scrollDown": 3}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 88, "offScreen": 12}
+      }
+    },
+    {
+      "type": "fill-in-the-blank",
+      "question": "Na podstawie poniższych informacji, uzupełnij zapytanie SQL, aby usunąć klienta o ID_Klienta równym 5:",
+      "query": "DELETE FROM Klient WHERE ID_Klienta = _______;",
+      "correctAnswer": "5",
+      "category": "data-manipulation",
+      "tags": ["DML", "delete"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 20000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 25,
+        "clicks": 5,
+        "scrolling": {"scrollUp": 0, "scrollDown": 1}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
     }
   ]
 }
