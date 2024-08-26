@@ -1,6 +1,109 @@
 {
   "exercises": [
     {
+      "type": "multiple-choice",
+      "question": "Które zapytanie SQL służy do tworzenia tabeli w bazie danych?",
+      "options": ["CREATE TABLE", "INSERT INTO", "SELECT", "DROP TABLE"],
+      "correctAnswer": "CREATE TABLE",
+      "explanation": "CREATE TABLE służy do tworzenia nowej tabeli w bazie danych.",
+      "reference": "https://www.sqltutorial.org/sql-create-table/",
+      "tags": ["DDL", "basic", "table-creation"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 15000, 
+        "device": "laptop",
+        "browser": "Chrome",
+        "resolution": "1920x1080"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 30,
+        "clicks": 5,
+        "scrolling": {"scrollUp": 0, "scrollDown": 1}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 95, "offScreen": 5}
+      }
+    },
+    {
+      "type": "fill-in-the-blank",
+      "question": "Aby zmienić wartość w istniejącym wierszu w tabeli, używamy zapytania `UPDATE table_name SET column_name = new_value _______ condition;`",
+      "correctAnswer": "WHERE",
+      "explanation": "Klauzula WHERE służy do określenia, które wiersze mają zostać zaktualizowane.",
+      "reference": "https://www.sqltutorial.org/sql-update/",
+      "tags": ["DML", "basic", "update"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 10000, 
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 40,
+        "clicks": 6,
+        "scrolling": {"scrollUp": 1, "scrollDown": 2}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Które zapytanie SQL zwraca wszystkie kolumny z tabeli?",
+      "options": ["SELECT *", "SELECT ALL", "SELECT COLUMNS", "SELECT EVERYTHING"],
+      "correctAnswer": "SELECT *",
+      "explanation": "SELECT * wybiera wszystkie kolumny z tabeli.",
+      "reference": "https://www.sqltutorial.org/sql-select/",
+      "tags": ["SELECT", "basic"],
+      "points": 5,
+      "level": "beginner",
+      "technicalInfo": {
+        "timeSpent": 10000,
+        "device": "desktop",
+        "browser": "Firefox",
+        "resolution": "1366x768"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 25,
+        "clicks": 5,
+        "scrolling": {"scrollUp": 0, "scrollDown": 1}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 95, "offScreen": 5}
+      }
+    },
+    {
+      "type": "sql-query",
+      "question": "Mówi się, że 'Sekret Mnicha' to cudowne remedium, ale czy na pewno? Policz, ile razy został sprzedany w Twoim sklepie.",
+      "query": "SELECT COUNT(*) FROM Sprzedaz WHERE ID_Materialu = (SELECT ID_Material FROM Material WHERE Nazwa_Materialu = 'Sekret Mnicha');",
+      "correctAnswer": "COUNT(*)",
+      "explanation": "Zapytanie używa funkcji agregującej COUNT do policzenia wystąpień.",
+      "reference": "https://www.sqltutorial.org/sql-aggregate-functions/",
+      "tags": ["aggregate-functions", "intermediate"],
+      "points": 10,
+      "level": "intermediate",
+      "technicalInfo": {
+        "timeSpent": 40000,
+        "device": "tablet",
+        "browser": "Safari",
+        "resolution": "2048x1536"
+      },
+      "behavioralInfo": {
+        "mouseMovements": 55,
+        "clicks": 11,
+        "scrolling": {"scrollUp": 3, "scrollDown": 4}
+      },
+      "biometricInfo": {
+        "faceRecognition": true,
+        "eyeTracking": {"onScreen": 90, "offScreen": 10}
+      }
+    },
+    {
       "type": "fill-in-the-blank",
       "question": "Na podstawie poniższych informacji, określ typy danych dla kolumn tabeli Klient:",
       "fields": [
@@ -13,18 +116,18 @@
       "tags": ["DDL", "data-types"],
       "points": 5,
       "level": "beginner",
-      "technicalDetails": {
+      "technicalInfo": {
         "timeSpent": 30000,
         "device": "laptop",
         "browser": "Chrome",
         "resolution": "1920x1080"
       },
-      "behavioralDetails": {
+      "behavioralInfo": {
         "mouseMovements": 50,
         "clicks": 10,
         "scrolling": {"scrollUp": 2, "scrollDown": 3}
       },
-      "biometricDetails": {
+      "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 90, "offScreen": 10}
       }
@@ -43,18 +146,18 @@
       "tags": ["DDL", "data-types"],
       "points": 5,
       "level": "beginner",
-      "technicalDetails": {
+      "technicalInfo": {
         "timeSpent": 45000,
         "device": "tablet",
         "browser": "Safari",
         "resolution": "2048x1536"
       },
-      "behavioralDetails": {
+      "behavioralInfo": {
         "mouseMovements": 75,
         "clicks": 15,
         "scrolling": {"scrollUp": 1, "scrollDown": 4}
       },
-      "biometricDetails": {
+      "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 85, "offScreen": 15}
       }
@@ -68,18 +171,18 @@
       "tags": ["SELECT", "WHERE", "basic"],
       "points": 5,
       "level": "beginner",
-      "technicalDetails": {
+      "technicalInfo": {
         "timeSpent": 20000,
         "device": "desktop",
         "browser": "Firefox",
         "resolution": "1366x768"
       },
-      "behavioralDetails": {
+      "behavioralInfo": {
         "mouseMovements": 30,
         "clicks": 5,
         "scrolling": {"scrollUp": 0, "scrollDown": 1}
       },
-      "biometricDetails": {
+      "biometricInfo": {
         "faceRecognition": true,
         "eyeTracking": {"onScreen": 95, "offScreen": 5}
       }
@@ -92,118 +195,20 @@
       "tags": ["DDL", "table-creation"],
       "points": 10,
       "level": "beginner",
-      "technicalDetails": {
+      "technicalInfo": {
         "timeSpent": 60000,
         "device": "laptop",
-        "browser": "Edge",
+        "browser": "Chrome",
         "resolution": "1920x1080"
       },
-      "behavioralDetails": {
-        "mouseMovements": 100,
-        "clicks": 20,
-        "scrolling": {"scrollUp": 3, "scrollDown": 5}
-      },
-      "biometricDetails": {
-        "faceRecognition": true,
-        "eyeTracking": {"onScreen": 92, "offScreen": 8}
-      }
-    },
-    {
-      "type": "sql-query",
-      "question": "Uzupełnij poniższe zapytanie SQL, aby wybrać wszystkich klientów z tabeli Klient, którzy mieszkają w 'Wesoła Wioska'.",
-      "query": "SELECT * FROM Klient WHERE _______ = 'Wesoła Wioska';",
-      "correctAnswer": "Miejscowość",
-      "category": "query-basics",
-      "tags": ["SELECT", "WHERE", "basic"],
-      "points": 5,
-      "level": "beginner",
-      "technicalDetails": {
-        "timeSpent": 40000,
-        "device": "tablet",
-        "browser": "Chrome",
-        "resolution": "2048x1536"
-      },
-      "behavioralDetails": {
-        "mouseMovements": 40,
-        "clicks": 8,
-        "scrolling": {"scrollUp": 2, "scrollDown": 3}
-      },
-      "biometricDetails": {
-        "faceRecognition": true,
-        "eyeTracking": {"onScreen": 88, "offScreen": 12}
-      }
-    },
-    {
-      "type": "open",
-      "question": "Dodaj nowy rekord do tabeli Material, dodając produkt 'Modlitewnik Seminarium Duchownego' o cenie 69.99 netto i stawce VAT 0.23.",
-      "correctAnswer": "INSERT INTO Material (ID_Material, Nazwa_Materialu, Cena_Netto, Stawka_VAT) VALUES (8, 'Modlitewnik Seminarium Duchownego', 69.99, 0.23);",
-      "category": "data-manipulation",
-      "tags": ["DML", "insert", "basic"],
-      "points": 10,
-      "level": "beginner",
-      "technicalDetails": {
-        "timeSpent": 55000,
-        "device": "desktop",
-        "browser": "Firefox",
-        "resolution": "1366x768"
-      },
-      "behavioralDetails": {
-        "mouseMovements": 60,
+      "behavioralInfo": {
+        "mouseMovements": 70,
         "clicks": 12,
-        "scrolling": {"scrollUp": 1, "scrollDown": 4}
+        "scrolling": {"scrollUp": 2, "scrollDown": 5}
       },
-      "biometricDetails": {
+      "biometricInfo": {
         "faceRecognition": true,
-        "eyeTracking": {"onScreen": 93, "offScreen": 7}
-      }
-    },
-    {
-      "type": "sql-query",
-      "question": "Uzupełnij poniższe zapytanie SQL, aby zaktualizować cenę netto produktu 'Komża Koronka' na 159.99.",
-      "query": "UPDATE Material SET Cena_Netto = 159.99 WHERE _______ = 'Komża Koronka';",
-      "correctAnswer": "Nazwa_Materialu",
-      "category": "data-manipulation",
-      "tags": ["DML", "update", "basic"],
-      "points": 10,
-      "level": "beginner",
-      "technicalDetails": {
-        "timeSpent": 35000,
-        "device": "laptop",
-        "browser": "Chrome",
-        "resolution": "1920x1080"
-      },
-      "behavioralDetails": {
-        "mouseMovements": 45,
-        "clicks": 9,
-        "scrolling": {"scrollUp": 0, "scrollDown": 2}
-      },
-      "biometricDetails": {
-        "faceRecognition": true,
-        "eyeTracking": {"onScreen": 90, "offScreen": 10}
-      }
-    },
-    {
-      "type": "open",
-      "question": "Usuń rekord z tabeli Material, który ma ID_Material = 8.",
-      "correctAnswer": "DELETE FROM Material WHERE ID_Material = 8;",
-      "category": "data-manipulation",
-      "tags": ["DML", "delete"],
-      "points": 10,
-      "level": "beginner",
-      "technicalDetails": {
-        "timeSpent": 40000,
-        "device": "tablet",
-        "browser": "Safari",
-        "resolution": "2048x1536"
-      },
-      "behavioralDetails": {
-        "mouseMovements": 55,
-        "clicks": 11,
-        "scrolling": {"scrollUp": 2, "scrollDown": 3}
-      },
-      "biometricDetails": {
-        "faceRecognition": true,
-        "eyeTracking": {"onScreen": 87, "offScreen": 13}
+        "eyeTracking": {"onScreen": 85, "offScreen": 15}
       }
     }
   ]
